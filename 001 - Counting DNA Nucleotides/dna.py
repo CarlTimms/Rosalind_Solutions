@@ -15,7 +15,7 @@
 import sys
 
 try:
-    with open(sys.argv[1], 'r') as f_in, open(sys.argv[1] + '-output', 'w') as f_out:
+    with open(sys.argv[1], 'r') as f_in, open(sys.argv[1] + '-output.txt', 'w') as f_out:
         dataset = f_in.read().rstrip()
 
         bases = {'A': 0, 'C': 0, 'G': 0, 'T': 0}
