@@ -14,6 +14,7 @@
 
 import sys
 
+
 try:
     with open(sys.argv[1], 'r') as f_in, open(sys.argv[1] + '-output.txt', 'w') as f_out:
         data_set = f_in.read().rstrip()
