@@ -38,7 +38,7 @@ codon = {
     "UAA":  '', "UAG":  '', "UGA": ''
     }
 
-with open(sys.argv[1], 'r') as f_in, open(sys.argv[1].split('.')[0]  + '-output.txt', 'w') as f_out:
+with open(sys.argv[1], 'r') as f_in, open(sys.argv[1].split('.')[0] + '-OUTPUT.txt', 'w') as f_out:
     data = f_in.read().rstrip()
     protein_string = ''.join([codon[data[i:i + 3]] for i in range(0, len(data), 3)])
     f_out.write(protein_string)

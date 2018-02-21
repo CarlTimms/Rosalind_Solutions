@@ -15,7 +15,7 @@
 import sys
 
 try:
-    with open(sys.argv[1], 'r') as f_in:
+    with open(sys.argv[1], 'r') as f_in, open(sys.argv[1].split('.')[0] + '-OUTPUT.txt', 'w') as f_out:
         parameters = f_in.read().rstrip().split(' ')
 
         n = int(parameters[0])  # Number of months
@@ -26,7 +26,7 @@ try:
             gen_n = gen_b + (gen_a * k)  # The current generation size. From recurrence relation Fn = Fn-1 + (Fn-2) * k
             gen_a, gen_b = gen_b, gen_n
 
-        print("Rabbits after {} months (k = {} pairs per litter) =".format(n, k), gen_b)
+        f_out.write(str(gen_b))
 
 except Exception as e:
     print("Failed with exception:", e)

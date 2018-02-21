@@ -14,7 +14,7 @@
 
 import sys
 
-with open(sys.argv[1], 'r') as f_in, open(sys.argv[1] + '-output.txt', 'w') as f_out:
+with open(sys.argv[1], 'r') as f_in, open(sys.argv[1].split('.')[0] + '-OUTPUT.txt', 'w') as f_out:
     data_set = f_in.read().rstrip()
 
     hamm_dist = 0

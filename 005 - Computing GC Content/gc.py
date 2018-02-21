@@ -15,7 +15,7 @@
 import sys
 
 try:
-    with open(sys.argv[1], 'r') as f_in, open(sys.argv[1] + '-output.txt', 'w') as f_out:
+    with open(sys.argv[1], 'r') as f_in, open(sys.argv[1].split('.')[0] + '-OUTPUT.txt', 'w') as f_out:
         fasta = f_in.read().replace('\n', '')
 
         max_id, max_gcc = "", 0
